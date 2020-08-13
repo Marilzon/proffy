@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import PageHeader from '../../components/PageHeader';
 import Textarea from '../../components/TextArea';
@@ -12,6 +13,8 @@ import api from '../../services/api';
 import './style.css';
 
 function TeacherForm() {
+  const history = useHistory();
+
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
@@ -54,6 +57,7 @@ function TeacherForm() {
       schedule: scheduleItems
     }).then(() => {
       alert('Cadastro Realizado com sucesso!');
+      history.push('/')
     }).catch(() => {
       alert('Erro no cadastro!');
     });

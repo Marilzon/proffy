@@ -2,22 +2,36 @@ import React from 'react';
 import whatsappSvg from '../../assets/images/icons/whatsapp.svg';
 import './style.css';
 
-function TeacherItem() {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FunctionComponent<TeacherItemProps> = ({ teacher }) => {
   return (
     <article className="teacher-item">
       <header>
-        <img src="https://avatars3.githubusercontent.com/u/12675707?s=460&u=a6dfdf2f5476c91126fc9ad26e9a63b2e2edb8b2&v=4" alt="Marilzon de Sousa" />
+        <img src={teacher.avatar} alt={teacher.name} />
         <div>
-          <strong>Marilzon de Sousa</strong>
-          <span>Aula de ReactJS</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
       <p>
-        Na aula de ReactJS vc aprende a criar interfaces robustas
-    </p>
+        {teacher.bio}
+      </p>
       <footer>
         <p>
-          Preco por hora: <strong>60R$</strong>
+          Preco por hora: <strong>R$ {teacher.cost}</strong>
         </p>
         <button type="button">
           <img src={whatsappSvg} alt="Icone WhatsApp" />
