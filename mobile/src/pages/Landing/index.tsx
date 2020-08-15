@@ -17,6 +17,10 @@ function Landing() {
     navigate('GiveClasses');
   }
 
+  function handleTabsStudy() {
+    navigate('Study');
+  }
+
   return (
     <View style={styles.container}>
       <Image style={styles.banner} source={landingPng} />
@@ -28,7 +32,10 @@ function Landing() {
       </Text>
 
       <View style={styles.buttonsContainer}>
-        <RectButton style={[styles.button, styles.buttonPrimary]}>
+        <RectButton
+          onPress={handleTabsStudy}
+          style={[styles.button, styles.buttonPrimary]}
+        >
           <Image source={studyPng} />
           <Text style={styles.buttonText}>Estudar</Text>
         </RectButton>
