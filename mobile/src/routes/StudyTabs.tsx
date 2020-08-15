@@ -44,12 +44,23 @@ function StudyTabs() {
           tabBarLabel: 'Proffys',
           tabBarIcon: ({ color, size }) => {
             return (
-              <Ionicons name="ios=easel" size={size} color={color} />
+              <Ionicons name="ios-easel" size={size} color={color} />
             );
           }
         }}
       />
-      <Screen name="Favorites" component={Favorites} />
+      <Screen
+        name="Favorites"
+        component={Favorites}
+        options={{
+          tabBarLabel: 'Favoritos',
+          tabBarIcon: ({ color, size }) => {
+            return (
+              <Ionicons name="ios-heart" size={size} color={color} />
+            );
+          }
+        }}
+        />
     </Navigator>
   )
 }

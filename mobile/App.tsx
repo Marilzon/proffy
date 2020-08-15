@@ -3,7 +3,6 @@ import React from 'react';
 
 import AppStack from './src/routes/AppStack';
 import { AppLoading } from 'expo';
-import * as Font from 'expo-font';
 
 import { Archivo_400Regular, Archivo_700Bold } from '@expo-google-fonts/archivo';
 import { Poppins_400Regular, Poppins_600SemiBold, useFonts } from '@expo-google-fonts/poppins';
