@@ -1,6 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { Poppins_400Regular, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
-//import { Archivo_700Bold } from '@expo-google-fonts/archivo';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,7 +12,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontFamily: 'Poppins_600SemiBold',
+    fontFamily: 'Archivo_700Bold',
     color: '#FFF',
     fontSize: 32,
     lineHeight: 37,
@@ -39,7 +37,7 @@ const styles = StyleSheet.create({
   okButtonText: {
     color: '#FFF',
     fontSize: 16,
-    fontFamily: 'Poppins_600SemiBold',
+    fontFamily: 'Archivo_700Bold',
   }
 });
 
